@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.4 on win32)" generated="2025-10-20T17:54:47.613040" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Correto" source="c:\Users\guilherme.souza\Desktop\Cursos_Alura\cursoRobotFramework\organoTest\testes\preenchimento_correto.robot">
+<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time escolhido" line="8">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-20T17:54:47.890589" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-20T17:54:47.888400" elapsed="2.060998"/>
+</kw>
+<status status="PASS" start="2025-10-20T17:54:47.888400" elapsed="2.060998"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário" owner="cadastro_organo">
+<kw name="FakerLibrary.First Name">
+<msg time="2025-10-20T17:54:49.959721" level="FAIL">No keyword with name 'FakerLibrary.First Name' found.</msg>
+<var>${Nome}</var>
+<status status="FAIL" start="2025-10-20T17:54:49.958714" elapsed="0.002265">No keyword with name 'FakerLibrary.First Name' found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-20T17:54:49.962010" elapsed="0.001003"/>
+</kw>
+<kw name="FakerLibrary.Job">
+<var>${Cargo}</var>
+<status status="NOT RUN" start="2025-10-20T17:54:49.963952" elapsed="0.000816"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="FakerLibrary.Image Url">
+<var>${Imagem}</var>
+<arg>width=200</arg>
+<arg>height=100</arg>
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${selecionar_time}[0]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-20T17:54:49.953985" elapsed="0.010783">No keyword with name 'FakerLibrary.First Name' found.</status>
+</kw>
+<kw name="E clique no botão &quot;Criar Card&quot;" owner="cadastro_organo">
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="Então identificar o card no time esperado" owner="cadastro_organo">
+<status status="NOT RUN" start="2025-10-20T17:54:49.964768" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-20T17:54:49.964768" elapsed="2.342988"/>
+</kw>
+<status status="PASS" start="2025-10-20T17:54:49.964768" elapsed="2.342988"/>
+</kw>
+<status status="FAIL" start="2025-10-20T17:54:47.880287" elapsed="4.427469">No keyword with name 'FakerLibrary.First Name' found.</status>
+</test>
+<status status="FAIL" start="2025-10-20T17:54:47.613040" elapsed="4.694716"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Preenchimento Correto" id="s1" pass="0" fail="1" skip="0">Preenchimento Correto</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-20T17:54:47.879762" level="ERROR">Error in file 'c:\Users\guilherme.souza\Desktop\Cursos_Alura\cursoRobotFramework\organoTest\resource\main.robot' on line 3: Importing library 'RobotFramework-faker' failed: ModuleNotFoundError: No module named 'RobotFramework-faker'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\guilherme.souza\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\guilherme.souza\Desktop\Cursos_Alura\cursoRobotFramework\organoTest
+  c:\Users\guilherme.souza\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\guilherme.souza\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  c:\Python312\python312.zip
+  c:\Python312\DLLs
+  c:\Python312\Lib
+  c:\Python312
+  c:\Python312\Lib\site-packages</msg>
+</errors>
+</robot>
